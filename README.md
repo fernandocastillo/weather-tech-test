@@ -9,32 +9,50 @@
 
 ## Fernando's Weather Project
 
-####Installation instructions
+###Installation instructions
+```
     composer install
+```
 
-####Running migrations and seeders (Initial fake data for 3 tables)
+###Running migrations and seeders (Initial fake data for 3 tables)
+```
     php artisan migrate --seed
+```
 
-####Start server for api testing
+###Start server for api testing
+```
     php artisan serve
+```
 
-####CRUD City Controller
+###CRUD City Controller
 
 List all cities (paginated):
+```
 GET http://localhost:8000/api/city
+```
 
 Create a city:
+```
 POST http://localhost:8000/api/city
+```
 
 View one single city:
+```
 GET http://localhost:8000/api/city/{ID}/view
+```
 
 Update a city:
+```
 PUT http://localhost:8000/api/city/{ID}/update
+```
 
 Delete a city:
+```
 DELETE http://localhost:8000/api/city/{ID}/delete
+```
 
-####Forecast controller
+###Forecast controller
 Look for a city by name and return city detail with forecast info:
+```
 GET http://localhost:8000/api/forecast/{CITY_NAME}
+```
