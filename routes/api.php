@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\ForecastController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +27,8 @@ Route::group(['prefix' => 'city'],function(){
     Route::get('/{city_id}/view',[CityController::class,'view']);
     Route::put('/{city_id}',[CityController::class,'update']);
     Route::delete('/{city_id}',[CityController::class,'delete']);
+});
 
+Route::group(['prefix' => 'forecast'],function(){
+    Route::get('/{city_name}',[ForecastController::class,'index']);
 });

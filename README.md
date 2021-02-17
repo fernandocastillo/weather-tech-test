@@ -35,4 +35,6 @@ PUT http://localhost:8000/api/city/{ID}/update
 Delete a city:
 DELETE http://localhost:8000/api/city/{ID}/delete
 
-
+####Forecast controller
+Look for a city by name and return city detail with forecast info:
+GET http://localhost:8000/api/forecast/{CITY_NAME}
